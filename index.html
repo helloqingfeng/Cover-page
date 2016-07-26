@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://v3.bootcss.com/favicon.ico">
+
+    <title>一个单简单、漂亮的首页</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="http://v3.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Cover</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">首页</a></li>
+                  <li><a href="https://github.com/helloqingfeng" target="_blank">MyGithub</a></li>
+                  <li><a href="http://www.toutiao.com/m6214044258/" target="_blank">韩娱明星</a></li>
+                  <li><a href="#" id="changeback" style="color:#ed5736;"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>切换背景</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">封面图</h1>
+            <p class="lead">一个简单而美丽的主页单页模板。下载，编辑，并添加自己的全屏背景照片，打造属于你自己的页面。</p>
+            <p class="lead">
+              <a href="http://v3.bootcss.com/examples/cover/" class="btn btn-lg btn-default btn-outline" target="_blank">了解更多</a>
+            </p>
+            <p class="lead">
+      <a href="getting-started#download" class="btn btn-default btn-outline btn-lg" target="_blank">下载源码</a>
+    </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://v3.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+    // $(document).ready(function(){
+    //     $(".changeback").click(function(){
+    //         $("body").css("backgroundColor","#333");
+    //     })
+    // })
+        var imageNum=1;
+        $("#changeback").click(function(){
+            imageNum++;
+            if(imageNum==4){
+                imageNum=1;
+            }
+            console.log(imageNum);
+            switch(imageNum){
+                case 3:
+                $("body,html").css({
+                    "backgroundColor":"#333","background-image":"none"}
+                    );
+                event.preventDefault();
+                break;
+                case 2:
+                $("body,html").css("background-image","url('back001.jpg')");
+                event.preventDefault();
+                break;
+                case 1:
+                $("body,html").css("background-image","url('back002.jpg')");
+                event.preventDefault();
+                break;
+            }
+        })
+
+    </script>
+  </body>
+</html>
