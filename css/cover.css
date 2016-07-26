@@ -27,7 +27,7 @@
  html,
  body {
   height: 100%;
-  background-image: url("back002.jpg") ;
+  background-image: url("../back002.jpg") ;
   font-family: "Helvetica Neue", Helvetica,  "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", sans-serif;
 }
 body {
